@@ -6,7 +6,7 @@ import {
   Popup,
   Circle
 } from "react-leaflet";
-// import { DivIcon } from "leaflet";
+import { DivIcon } from "leaflet";
 import { motion } from "framer-motion";
 
 // Coordinates
