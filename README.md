@@ -34,6 +34,13 @@
 pharmdelivery/
 ├── src/
 │   ├── components/
+│   │    ├── AuthModal.jsx
+│   │    ├── DroneNavbar.jsx
+│   │    ├── Features.jsx
+│   │    ├── Footer.jsx
+│   │    ├── Hero.jsx
+│   │    ├── HowItWorks.jsx
+│   │    ├── SkyGridMap.jsx
 │   ├── pages/
 │   ├── App.jsx
 │   └── main.jsx
