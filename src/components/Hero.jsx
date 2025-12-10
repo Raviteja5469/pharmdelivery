@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { ArrowRight, Activity, Zap } from 'lucide-react';
+import HeroVideoSource from '../assets/Video1.mp4'
 
 export const Hero = () => {
   const ref = useRef(null);
@@ -100,9 +101,7 @@ export const Hero = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* Right Visual - 3D Parallax */}
-      <div className="w-full md:w-1/2 h-[500px] md:h-full flex items-center justify-center relative perspective-1000">
+      <div className="w-full md:w-1/2 h-[500px] flex items-center justify-center relative perspective-1000">
         <motion.div
           style={{
             rotateX,
@@ -113,23 +112,22 @@ export const Hero = () => {
         >
           {/* Abstract Drone Representation */}
           <div className="absolute inset-0 bg-gradient-to-tr from-electric-teal/10 to-transparent rounded-full blur-3xl transform translate-z-[-50px]"></div>
-          <video 
-              muted 
-              autoPlay 
-              loop 
-              className="w-full h-full object-contain drop-shadow-2xl relative z-10 rounded-5xl"
-              style={{
-                  transform: "translateZ(20px)"
-              }}
+          
+         <video 
+            muted 
+            autoPlay 
+            loop 
+            className="w-full h-full object-contain drop-shadow-2xl relative z-10 rounded-5xl"
+            style={{
+                transform: "translateZ(20px)"
+            }}
+            onError={(e) => console.error("Video load error:", e.target.error)}
           >
-              {/* This line was updated: added the trailing slash for JSX compatibility */}
-              <source src="/HeroVideo.mp4" type="video/mp4" />
+            {/* UPDATED SRC: Use the imported variable */}
+            <source src={HeroVideoSource} type="video/mp4" /> 
 
-              {/* Fallback text */}
-              Your browser does not support the video tag.
+            Your browser does not support the video tag.
           </video>
-
-
           
           {/* Floating UI Elements */}
           <motion.div 
