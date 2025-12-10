@@ -7,6 +7,7 @@ import {
   Circle
 } from "react-leaflet";
 import { DivIcon } from "leaflet";
+import 'leaflet/dist/leaflet.css';
 import { motion } from "framer-motion";
 
 // Coordinates
